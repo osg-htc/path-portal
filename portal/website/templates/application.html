@@ -25,12 +25,17 @@
                 <p>
                     We are excited to meet with you and look forward to helping you scale up your research!
                 </p>
+                <div class="alert alert-primary">
+                    Welcome <b><a href="https://nairrpilot.org/opportunities/allocations">NAIRR pilot projects</a></b>! PATh is excited to support your research via the
+                    PATh and OSPool resources. Fill out the form below to get started.
+                </div>
                 <h2>Request Form</h2>
                 <form id="consultation-form" name="consultation-form" method="post" action="">
                     <div>
                         <label for="researcher-status" class="form-label">Credit Allocation Status</label>
                         <select id="researcher-status" name="researcher-status" class="form-select" required>
                             <option selected disabled value="">-- Select a Researcher Application Status --</option>
+                            <option value="nairr">N/A - I am a current or future participant in the NAIRR Pilot</option>
                             <option value="awarded">I have been awarded a credit allocation by the NSF</option>
                             <option value="submitted">I have submitted a proposal for a credit allocation</option>
                             <option value="assistance">I would like assistance submitting a proposal for a credit allocation</option>
@@ -77,6 +82,12 @@
                     <div class="pt-3">
                         <label for="additional-info" class="form-label">Additional Information:</label>
                         <textarea id="additional-info" name="additional-info" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="pt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="nairr-project" id="nairr-project">
+                            <label for="nairr-project" class="form-check-label text-primary">I am a current or future participant in the NAIRR Pilot</label>
+                        </div>
                     </div>
                     <div class="h-captcha mt-3" data-sitekey="deb6e053-975d-4c72-86be-6c91fdf4babf"></div>
                     <div id="form-error" class="alert alert-warning py-2 my-2" role="alert" hidden></div>
