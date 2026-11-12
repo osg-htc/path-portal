@@ -1,6 +1,6 @@
 
-ARG BASE_OSG_SERIES=23
-ARG BASE_OS=el9
+ARG BASE_OSG_SERIES=26
+ARG BASE_OS=el10
 ARG BASE_YUM_REPO=release
 
 FROM opensciencegrid/software-base:$BASE_OSG_SERIES-$BASE_OS-$BASE_YUM_REPO
@@ -15,7 +15,7 @@ RUN \
     yum clean all && rm -rf /var/cache/yum/*
 
 COPY portal run_local.sh requirements.txt /opt/portal/
-RUN pip3 install -U pip && pip3 install -r /opt/portal/requirements.txt
+RUN pip3 install -U pip && pip3 install --ignore-installed -r /opt/portal/requirements.txt
 
 COPY register.py /usr/bin
 COPY supervisor-apache.conf /etc/supervisord.d/40-apache.conf
